@@ -1,0 +1,16 @@
+## .NET build output
+[Bb]in/
+[Oo]bj/
+
+## Visual Studio and VS Code
+.vs/
+*.user
+*.suo
+
+## Test results
+TestResults/
+*.trx
+
+## Local environment
+.env
+.env.*
