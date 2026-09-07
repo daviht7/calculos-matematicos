@@ -31,4 +31,9 @@ public static class Calculadora
 	}
 
 	public static decimal CalcularPercentual(decimal valor, decimal percentual) => valor * percentual / 100;
+
+	public static decimal EncontrarMaior(decimal primeiroValor, decimal segundoValor, decimal terceiroValor, decimal quartoValor, decimal quintoValor)
+	{
+		return Math.Max(Math.Max(Math.Max(Math.Max(primeiroValor, segundoValor), terceiroValor), quartoValor), quintoValor);
+	}
 }
