@@ -26,6 +26,12 @@ public class CalculadoraTests
     }
 
     [Fact]
+    public void DeveEncontrarMenorNumeroEntreDezValores()
+    {
+        Assert.Equal(-3m, Calculadora.EncontrarMenor(4m, 12m, 7m, 2m, 9m, 0m, 15m, -3m, 8m, 1m));
+    }
+
+    [Fact]
     public void DeveImpedirDivisaoPorZero()
     {
         Assert.Throws<DivideByZeroException>(() => Calculadora.Dividir(10m, 0m));
