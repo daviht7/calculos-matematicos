@@ -20,6 +20,12 @@ public class CalculadoraTests
     }
 
     [Fact]
+    public void DeveCalcularMediaDeCincoNumeros()
+    {
+        Assert.Equal(3.5m, Calculadora.CalcularMedia(1m, 2m, 3m, 4m, 7.5m));
+    }
+
+    [Fact]
     public void DeveImpedirDivisaoPorZero()
     {
         Assert.Throws<DivideByZeroException>(() => Calculadora.Dividir(10m, 0m));

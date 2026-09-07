@@ -31,4 +31,9 @@ public static class Calculadora
 	}
 
 	public static decimal CalcularPercentual(decimal valor, decimal percentual) => valor * percentual / 100;
+
+	public static decimal CalcularMedia(decimal primeiroValor, decimal segundoValor, decimal terceiroValor, decimal quartoValor, decimal quintoValor)
+	{
+		return (primeiroValor + segundoValor + terceiroValor + quartoValor + quintoValor) / 5;
+	}
 }

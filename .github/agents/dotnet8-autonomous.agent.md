@@ -20,7 +20,7 @@ Para cada demanda:
 2. Gerar um ID no formato `REQ-YYYYMMDD-HHmmss` se o usuario nao fornecer um.
 3. Criar um slug seguro para o titulo.
 4. Inspecionar `.sln`, `.slnx`, `.csproj`, testes, configuracoes e documentacao.
-5. Verificar o estado do Git e criar a branch `feature/<id>-<slug>`.
+5. Verificar o estado do Git, garantir que `staging` esteja atualizada e criar a branch `feature/<id>-<slug>` a partir dela.
 6. Criar `.agent/history/<id>-<slug>/` e atualizar os seis arquivos de historico durante o trabalho.
 7. Implementar a feature seguindo a arquitetura existente.
 8. Criar ou atualizar testes automatizados.
@@ -34,7 +34,7 @@ dotnet test --configuration Release --no-build
 
 10. Corrigir falhas e repetir as validacoes.
 11. Criar commits focados somente na demanda.
-12. Criar o Pull Request usando o remoto e as ferramentas disponiveis.
+12. Criar o Pull Request usando o remoto e as ferramentas disponiveis, sempre com a branch base `staging`.
 13. Registrar titulo, descricao, criterios, testes, riscos e link do PR em `05-pull-request.md`.
 14. Responder ao usuario com o resumo completo e qualquer bloqueio real.
 
@@ -43,6 +43,8 @@ dotnet test --configuration Release --no-build
 O historico nunca deve ser preenchido apenas no final. Registre as decisoes assim que cada etapa terminar. Se o trabalho for interrompido, deixe o ultimo estado e a proxima acao clara.
 
 ## Pull Request
+
+A branch `staging` deve existir no remoto e ser a base de integracao. Toda nova demanda deve ser desenvolvida em uma branch `feature/<id>-<slug>` criada a partir de `staging`, e o Pull Request deve apontar para `staging`.
 
 Use o titulo:
 

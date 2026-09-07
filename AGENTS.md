@@ -24,6 +24,7 @@ O agente deve executar a demanda completa: analisar o repositorio, planejar, edi
 7. Executar restore, build, testes e validacoes aplicaveis.
 8. Registrar cada resultado no historico.
 9. Criar commits focados e o Pull Request quando houver autenticacao e remoto disponiveis.
+10. Usar `staging` como branch base; toda nova feature deve sair de `staging` e ter Pull Request direcionado para `staging`.
 
 ## Historico obrigatorio
 
