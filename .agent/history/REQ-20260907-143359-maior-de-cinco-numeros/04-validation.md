@@ -8,4 +8,8 @@ dotnet test tests/CalculosMatematicos.Tests/CalculosMatematicos.Tests.csproj --c
 
 Resultado: 5 testes aprovados e 0 falhos.
 
-A validacao completa sera registrada apos executar restore, build Release e testes sem build.
+Validacao completa executada com sucesso:
+
+- `dotnet restore`: aprovado.
+- `dotnet build --configuration Release --no-restore`: aprovado.
+- `dotnet test --configuration Release --no-build`: 5 aprovados e 0 falhos.
