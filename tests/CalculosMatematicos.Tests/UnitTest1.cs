@@ -20,6 +20,12 @@ public class CalculadoraTests
     }
 
     [Fact]
+    public void DeveEncontrarMaiorNumeroEntreCincoValores()
+    {
+        Assert.Equal(12m, Calculadora.EncontrarMaior(4m, 12m, 7m, 2m, 9m));
+    }
+
+    [Fact]
     public void DeveImpedirDivisaoPorZero()
     {
         Assert.Throws<DivideByZeroException>(() => Calculadora.Dividir(10m, 0m));
