@@ -36,4 +36,9 @@ public static class Calculadora
 	{
 		return Math.Max(Math.Max(Math.Max(Math.Max(primeiroValor, segundoValor), terceiroValor), quartoValor), quintoValor);
 	}
+
+	public static decimal EncontrarMenor(decimal primeiroValor, decimal segundoValor, decimal terceiroValor, decimal quartoValor, decimal quintoValor, decimal sextoValor, decimal setimoValor, decimal oitavoValor, decimal nonoValor, decimal decimoValor)
+	{
+		return Math.Min(Math.Min(Math.Min(Math.Min(Math.Min(primeiroValor, segundoValor), terceiroValor), quartoValor), quintoValor), Math.Min(Math.Min(Math.Min(Math.Min(sextoValor, setimoValor), oitavoValor), nonoValor), decimoValor));
+	}
 }
